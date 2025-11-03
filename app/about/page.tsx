@@ -9,32 +9,28 @@ const teamMembers = [
     role: '全栈工程师 / 团队负责人',
     avatar: '👨‍💻',
     background: '前阿里巴巴高级开发工程师，8年全栈开发经验',
-    skills: ['React', 'Node.js', 'System Architecture'],
-    gradient: 'from-blue-500 to-blue-600'
+    skills: ['React', 'Node.js', 'System Architecture']
   },
   {
     name: '李明',
     role: '前端工程师',
     avatar: '👨‍🎨',
     background: '前腾讯前端开发，精通现代前端技术栈',
-    skills: ['React', 'Vue', 'UI/UX Design'],
-    gradient: 'from-purple-500 to-purple-600'
+    skills: ['React', 'Vue', 'UI/UX Design']
   },
   {
     name: '王芳',
     role: '后端工程师',
     avatar: '👩‍💻',
     background: '前字节跳动后端开发，擅长高并发系统',
-    skills: ['Node.js', 'Python', 'Database'],
-    gradient: 'from-green-500 to-green-600'
+    skills: ['Node.js', 'Python', 'Database']
   },
   {
     name: '刘洋',
     role: '移动端工程师',
     avatar: '📱',
     background: '前美团移动端开发，iOS/Android双端经验',
-    skills: ['React Native', 'iOS', 'Android'],
-    gradient: 'from-orange-500 to-orange-600'
+    skills: ['React Native', 'iOS', 'Android']
   }
 ];
 
@@ -42,26 +38,22 @@ const values = [
   {
     icon: Shield,
     title: '质量保证',
-    description: '严格的代码审查和测试流程，确保交付高质量产品',
-    gradient: 'from-blue-500 to-blue-600'
+    description: '严格的代码审查和测试流程，确保交付高质量产品'
   },
   {
     icon: Clock,
     title: '按时交付',
-    description: '合理的项目规划，从不延期，准时完成每个里程碑',
-    gradient: 'from-purple-500 to-purple-600'
+    description: '合理的项目规划，从不延期，准时完成每个里程碑'
   },
   {
     icon: Award,
     title: '专业技术',
-    description: '团队成员均来自一线互联网公司，技术过硬',
-    gradient: 'from-green-500 to-green-600'
+    description: '团队成员均来自一线互联网公司，技术过硬'
   },
   {
     icon: Users,
     title: '用户至上',
-    description: '以用户体验为中心，打造真正好用的产品',
-    gradient: 'from-orange-500 to-orange-600'
+    description: '以用户体验为中心，打造真正好用的产品'
   }
 ];
 
@@ -119,17 +111,17 @@ const stats = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div className="pt-16 bg-white">
+      {/* Hero Section - 黑白灰 */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">关于我们</h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-black text-black mb-6">关于我们</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               一支来自一线互联网公司的精英团队
               <br />
               用技术和热情为您打造卓越产品
@@ -151,7 +143,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-black text-black mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -170,7 +162,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">我们的故事</h2>
+            <h2 className="text-5xl font-black text-black mb-8 text-center">我们的故事</h2>
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Tech团队成立于2020年，由几位来自阿里、腾讯、字节等一线互联网公司的工程师共同创立。
@@ -198,7 +190,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">核心团队</h2>
+            <h2 className="text-5xl font-black text-black mb-4">核心团队</h2>
             <p className="text-xl text-gray-600">
               一群热爱技术、追求卓越的工程师
             </p>
@@ -208,19 +200,19 @@ export default function AboutPage() {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className={`w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-5xl`}>
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center text-5xl">
                   {member.avatar}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 text-center mb-1">
+                <h3 className="text-xl font-bold text-black text-center mb-1">
                   {member.name}
                 </h3>
-                <p className="text-primary-600 text-center mb-4 font-semibold">
+                <p className="text-gray-600 text-center mb-4 font-semibold">
                   {member.role}
                 </p>
                 <p className="text-gray-600 text-sm text-center mb-4">
@@ -230,7 +222,7 @@ export default function AboutPage() {
                   {member.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="bg-primary-50 text-primary-700 text-xs px-2 py-1 rounded-full"
+                      className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
                     >
                       {skill}
                     </span>
@@ -251,7 +243,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">我们的价值观</h2>
+            <h2 className="text-5xl font-black text-black mb-4">我们的价值观</h2>
             <p className="text-xl text-gray-600">
               这些原则指导着我们的每一个决策
             </p>
@@ -263,16 +255,16 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
+                  className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center`}>
-                    <Icon className="text-white" size={32} />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gray-100 flex items-center justify-center">
+                    <Icon className="text-black" size={32} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 text-center mb-2">
+                  <h3 className="text-xl font-bold text-black text-center mb-2">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 text-center">
@@ -294,7 +286,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">售后保障</h2>
+            <h2 className="text-5xl font-black text-black mb-4">售后保障</h2>
             <p className="text-xl text-gray-600">
               让您的每一笔投资都放心无忧
             </p>
@@ -306,14 +298,14 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={index}
-                  className={`${guarantee.bg} rounded-2xl p-6 hover:shadow-lg transition-all`}
+                  className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Icon className={`${guarantee.color} mb-3`} size={40} />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <Icon className="text-black mb-3" size={40} />
+                  <h3 className="text-xl font-bold text-black mb-2">
                     {guarantee.title}
                   </h3>
                   <p className="text-gray-600">
@@ -325,13 +317,13 @@ export default function AboutPage() {
           </div>
 
           <motion.div
-            className="mt-12 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-center text-white"
+            className="mt-12 bg-black rounded-2xl p-8 text-center text-white"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-2">我们的承诺</h3>
-            <p className="text-lg opacity-90">
+            <p className="text-lg text-gray-300">
               如果您对我们的服务不满意，我们承诺全额退款。
               您的满意是我们最大的追求！
             </p>

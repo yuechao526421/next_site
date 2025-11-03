@@ -78,7 +78,7 @@ export default function TestimonialCarousel() {
   }, [current]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-50 to-purple-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -86,7 +86,7 @@ export default function TestimonialCarousel() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">客户评价</h2>
+          <h2 className="text-5xl font-black text-black mb-4">客户评价</h2>
           <p className="text-xl text-gray-600">听听他们怎么说</p>
         </motion.div>
 
@@ -116,7 +116,7 @@ export default function TestimonialCarousel() {
               }}
               className="bg-white rounded-3xl shadow-2xl p-8 md:p-12"
             >
-              <Quote className="text-primary-200 mb-4" size={48} />
+              <Quote className="text-gray-200 mb-4" size={48} />
               
               <div className="flex items-center mb-4">
                 {[...Array(testimonials[current].rating)].map((_, i) => (
@@ -129,11 +129,11 @@ export default function TestimonialCarousel() {
               </p>
 
               <div className="flex items-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-3xl mr-4">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-3xl mr-4">
                   {testimonials[current].avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900 text-lg">{testimonials[current].name}</div>
+                  <div className="font-bold text-black text-lg">{testimonials[current].name}</div>
                   <div className="text-gray-600">{testimonials[current].company}</div>
                 </div>
               </div>
@@ -143,15 +143,15 @@ export default function TestimonialCarousel() {
           {/* Navigation buttons */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
           >
-            <ChevronLeft className="text-primary-600" size={24} />
+            <ChevronLeft className="text-black" size={24} />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
           >
-            <ChevronRight className="text-primary-600" size={24} />
+            <ChevronRight className="text-black" size={24} />
           </button>
 
           {/* Dots */}
@@ -164,7 +164,7 @@ export default function TestimonialCarousel() {
                   setCurrent(index);
                 }}
                 className={`w-2 h-2 rounded-full transition-all ${
-                  index === current ? 'bg-primary-600 w-8' : 'bg-gray-300'
+                  index === current ? 'bg-black w-8' : 'bg-gray-300'
                 }`}
               />
             ))}

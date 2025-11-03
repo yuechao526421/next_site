@@ -29,71 +29,67 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-slate-900/90 backdrop-blur-md shadow-lg shadow-purple-500/20 border-b border-purple-500/20' 
+          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200' 
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - 更有创意的设计 */}
+          {/* Logo - 极简设计 */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="relative w-10 h-10 bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-all duration-300"
-                 style={{ boxShadow: '0 0 20px rgba(168,85,247,0.5)' }}>
-              <span className="text-white font-bold text-xl relative z-10">T</span>
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-pink-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+              <span className="text-white font-bold text-lg">T</span>
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <span className="font-bold text-lg text-black">
               Tech团队
             </span>
           </Link>
 
-          {/* Desktop Navigation - 创意样式 */}
+          {/* Desktop Navigation - 极简风格 */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-gray-300 hover:text-white transition-colors font-medium group"
+                className="text-gray-700 hover:text-black transition-colors font-medium"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
             <Link
               href="/contact"
-              className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 overflow-hidden group"
+              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors font-medium"
             >
-              <span className="relative z-10">立即咨询</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              立即咨询
             </Link>
           </div>
 
-          {/* Mobile menu button - 更有设计感 */}
+          {/* Mobile menu button - 极简 */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-500 transition-colors text-white"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors text-black"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation - 深色风格 */}
+      {/* Mobile Navigation - 白色风格 */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-purple-500/20"
+            className="md:hidden bg-white border-t border-gray-200"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-4 py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-gray-300 hover:bg-purple-500/20 hover:text-white rounded-lg transition-colors"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black rounded-lg transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -101,7 +97,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-6 py-2 rounded-full"
+                className="block text-center bg-black text-white px-6 py-2 rounded-full"
               >
                 立即咨询
               </Link>

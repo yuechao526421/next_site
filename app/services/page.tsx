@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import PricingCard from '@/components/PricingCard';
-import { Code, Smartphone, AppWindow, Database, Cloud, Shield, Zap, Users } from 'lucide-react';
+import Link from 'next/link';
+import { Code, Smartphone, AppWindow, Database, Cloud, Shield, CheckCircle } from 'lucide-react';
 
 const services = [
   {
@@ -18,7 +18,9 @@ const services = [
       '源码完整交付',
       '30天免费维护'
     ],
-    gradient: 'from-blue-500 to-blue-600'
+    iconBg: 'bg-blue-500',
+    icon: Code,
+    topColor: 'bg-blue-500'
   },
   {
     title: '小程序开发',
@@ -35,7 +37,9 @@ const services = [
       '30天免费维护'
     ],
     popular: true,
-    gradient: 'from-green-500 to-green-600'
+    iconBg: 'bg-green-500',
+    icon: AppWindow,
+    topColor: 'bg-green-500'
   },
   {
     title: 'App 开发',
@@ -51,7 +55,9 @@ const services = [
       '后台管理系统',
       '30天免费维护'
     ],
-    gradient: 'from-purple-500 to-purple-600'
+    iconBg: 'bg-purple-500',
+    icon: Smartphone,
+    topColor: 'bg-purple-500'
   },
   {
     title: 'SaaS 系统',
@@ -67,7 +73,9 @@ const services = [
       'API 接口',
       '终身技术支持'
     ],
-    gradient: 'from-indigo-500 to-indigo-600'
+    iconBg: 'bg-indigo-500',
+    icon: Database,
+    topColor: 'bg-indigo-500'
   },
   {
     title: '电商平台',
@@ -83,7 +91,9 @@ const services = [
       '多端支持',
       '终身技术支持'
     ],
-    gradient: 'from-orange-500 to-orange-600'
+    iconBg: 'bg-orange-500',
+    icon: Cloud,
+    topColor: 'bg-orange-500'
   },
   {
     title: '定制开发',
@@ -99,7 +109,9 @@ const services = [
       '源码交付',
       '长期技术支持'
     ],
-    gradient: 'from-red-500 to-red-600'
+    iconBg: 'bg-red-500',
+    icon: Shield,
+    topColor: 'bg-red-500'
   }
 ];
 
@@ -116,79 +128,24 @@ const techStack = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div className="pt-16 bg-white">
+      {/* Hero Section - 黑白灰 */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">服务项目</h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-black text-black mb-6">服务项目</h1>
+            <p className="text-xl text-gray-600">
               明码标价 · 透明开发 · 按时交付
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">价格套餐</h2>
-            <p className="text-xl text-gray-600">
-              所有价格均为起步价，具体费用根据需求评估
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <PricingCard key={index} {...service} delay={index * 0.1} />
-            ))}
-          </div>
-
-          <motion.div
-            className="mt-16 text-center bg-white rounded-2xl p-8 shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🎁 特别优惠</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="flex items-start space-x-3">
-                <Zap className="text-yellow-500 flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">快速启动</h4>
-                  <p className="text-gray-600 text-sm">7天内启动项目，额外优惠5%</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Users className="text-blue-500 flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">推荐有礼</h4>
-                  <p className="text-gray-600 text-sm">推荐新客户，双方各得10%优惠</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Shield className="text-green-500 flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">长期合作</h4>
-                  <p className="text-gray-600 text-sm">签订年度维护，优惠20%</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
+      {/* Pricing Cards - 黑白灰卡片 */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -197,7 +154,106 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">技术栈</h2>
+            <h2 className="text-5xl font-black text-black mb-4">价格套餐</h2>
+            <p className="text-xl text-gray-600">
+              所有价格均为起步价，具体费用根据需求评估
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden relative"
+                >
+                  {service.popular && (
+                    <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      最受欢迎
+                    </div>
+                  )}
+                  <div className={`h-1 ${service.topColor}`} />
+                  <div className="p-8">
+                    <div className={`w-20 h-20 ${service.iconBg} rounded-2xl flex items-center justify-center mb-6`}>
+                      <Icon className="text-white" size={36} strokeWidth={2} />
+                    </div>
+                    <h3 className="text-2xl font-black text-black mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    {service.price === '联系报价' ? (
+                      <div className="text-3xl font-black text-black mb-6">
+                        联系报价
+                      </div>
+                    ) : (
+                      <div className="text-4xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-6">
+                        {service.price} <span className="text-2xl">起</span>
+                      </div>
+                    )}
+                    
+                    <ul className="space-y-3 mb-8">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-start text-gray-700">
+                          <CheckCircle className="text-green-600 mr-2 flex-shrink-0 mt-0.5" size={18} strokeWidth={3} />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Link
+                      href="/contact"
+                      className="block text-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all"
+                    >
+                      立即咨询
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            className="mt-16 text-center bg-gray-50 rounded-2xl p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-black text-black mb-6">特别优惠</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-4xl mb-2">⚡</div>
+                <h4 className="font-bold text-black mb-1">快速启动</h4>
+                <p className="text-gray-600 text-sm">7天内启动项目，额外优惠5%</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-2">👥</div>
+                <h4 className="font-bold text-black mb-1">推荐有礼</h4>
+                <p className="text-gray-600 text-sm">推荐新客户，双方各得10%优惠</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-2">🛡️</div>
+                <h4 className="font-bold text-black mb-1">长期合作</h4>
+                <p className="text-gray-600 text-sm">签订年度维护，优惠20%</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tech Stack - 黑白灰 */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl font-black text-black mb-4">技术栈</h2>
             <p className="text-xl text-gray-600">
               使用业界最前沿的技术，为您打造高性能应用
             </p>
@@ -209,14 +265,16 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-md transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Icon className="mx-auto text-primary-600 mb-3" size={40} />
-                  <div className="font-semibold text-gray-900">{tech.name}</div>
+                  <div className="w-12 h-12 mx-auto mb-3 bg-gray-100 rounded-xl flex items-center justify-center">
+                    <Icon className="text-black" size={28} />
+                  </div>
+                  <div className="font-semibold text-black text-sm">{tech.name}</div>
                 </motion.div>
               );
             })}
@@ -224,8 +282,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-gray-50">
+      {/* FAQ - 黑白灰 */}
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -233,7 +291,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">常见问题</h2>
+            <h2 className="text-5xl font-black text-black mb-4">常见问题</h2>
           </motion.div>
 
           <div className="space-y-6">
@@ -261,13 +319,13 @@ export default function ServicesPage() {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-md"
+                className="bg-gray-50 rounded-xl p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{faq.q}</h3>
+                <h3 className="text-xl font-bold text-black mb-2">{faq.q}</h3>
                 <p className="text-gray-600">{faq.a}</p>
               </motion.div>
             ))}

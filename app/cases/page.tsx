@@ -22,25 +22,25 @@ export default function CasesPage() {
     : cases.filter(c => c.category === selectedCategory);
 
   return (
-    <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div className="pt-16 bg-white">
+      {/* Hero Section - 黑白灰 */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">成功案例</h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-black text-black mb-6">成功案例</h1>
+            <p className="text-xl text-gray-600">
               50+ 成功项目，涵盖多个行业
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-white border-b sticky top-16 z-40">
+      {/* Category Filter - 黑白灰 */}
+      <section className="py-8 bg-white border-b border-gray-200 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => {
@@ -51,7 +51,7 @@ export default function CasesPage() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg scale-105'
+                      ? 'bg-black text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -166,7 +166,7 @@ export default function CasesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-5xl font-black text-black mb-6">
               看到心仪的案例了吗？
             </h2>
             <p className="text-xl text-gray-600 mb-8">
@@ -174,7 +174,7 @@ export default function CasesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all hover:scale-105"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all"
             >
               开始您的项目
             </Link>

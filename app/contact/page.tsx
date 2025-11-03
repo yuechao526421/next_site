@@ -65,17 +65,17 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div className="pt-16 bg-white">
+      {/* Hero Section - 黑白灰 */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">联系我们</h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-black text-black mb-6">联系我们</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               让我们聊聊您的项目，提供专业的技术咨询和精准报价
             </p>
           </motion.div>
@@ -102,41 +102,41 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">邮箱</h3>
+                    <h3 className="text-xl font-bold text-black mb-1">邮箱</h3>
                     <p className="text-gray-600">contact@techteam.com</p>
                     <p className="text-sm text-gray-500 mt-1">工作日24小时内回复</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">电话 / 微信</h3>
+                    <h3 className="text-xl font-bold text-black mb-1">电话 / 微信</h3>
                     <p className="text-gray-600">400-888-8888</p>
                     <p className="text-sm text-gray-500 mt-1">工作日 9:00 - 21:00</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">地址</h3>
+                    <h3 className="text-xl font-bold text-black mb-1">地址</h3>
                     <p className="text-gray-600">中国·北京·朝阳区</p>
                     <p className="text-sm text-gray-500 mt-1">可远程协作，支持全国服务</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-2xl p-8 border border-primary-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 快速响应</h3>
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                <h3 className="text-2xl font-bold text-black mb-4">🚀 快速响应</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="text-green-500 mr-2 flex-shrink-0" size={20} />
@@ -165,7 +165,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">在线咨询</h3>
+                <h3 className="text-2xl font-bold text-black mb-6">在线咨询</h3>
                 
                 {status === 'success' ? (
                   <div className="text-center py-12">
@@ -290,7 +290,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={status === 'loading'}
-                      className="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                      className="w-full bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                     >
                       {status === 'loading' ? (
                         <>

@@ -78,7 +78,7 @@ export default function PriceCalculator() {
   const estimatedDays = Math.ceil(15 + state.pages * 1.5 + state.features.length * 2);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -86,11 +86,11 @@ export default function PriceCalculator() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full mb-4">
+          <div className="inline-flex items-center space-x-2 bg-gray-100 text-black px-4 py-2 rounded-full mb-4">
             <Calculator size={20} />
             <span className="font-semibold">智能计价器</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">实时计算项目报价</h2>
+          <h2 className="text-5xl font-black text-black mb-4">实时计算项目报价</h2>
           <p className="text-xl text-gray-600">
             选择您的项目需求，立即获取预估报价
           </p>
@@ -106,7 +106,7 @@ export default function PriceCalculator() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">1. 项目类型</h3>
+              <h3 className="text-xl font-bold text-black mb-4">1. 项目类型</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {projectTypes.map((type) => (
                   <button
@@ -114,7 +114,7 @@ export default function PriceCalculator() {
                     onClick={() => setState({ ...state, projectType: type.id as any })}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       state.projectType === type.id
-                        ? 'border-primary-500 bg-primary-50 text-primary-700'
+                        ? 'border-black bg-gray-100 text-black'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function PriceCalculator() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 2. 页面数量: {state.pages} 个
               </h3>
               <input
@@ -158,7 +158,7 @@ export default function PriceCalculator() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">3. 功能模块</h3>
+              <h3 className="text-xl font-bold text-black mb-4">3. 功能模块</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {featuresList.map((feature) => (
                   <button
@@ -171,14 +171,14 @@ export default function PriceCalculator() {
                     }}
                     className={`flex items-center justify-between p-3 rounded-lg border-2 transition-all ${
                       state.features.includes(feature.id)
-                        ? 'border-primary-500 bg-primary-50'
+                        ? 'border-black bg-gray-100'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
                     <div className="flex items-center">
                       <div className={`w-5 h-5 rounded border-2 mr-3 flex items-center justify-center ${
                         state.features.includes(feature.id)
-                          ? 'border-primary-500 bg-primary-500'
+                          ? 'border-black bg-gray-1000'
                           : 'border-gray-300'
                       }`}>
                         {state.features.includes(feature.id) && (
@@ -201,7 +201,7 @@ export default function PriceCalculator() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">4. 设计等级</h3>
+              <h3 className="text-xl font-bold text-black mb-4">4. 设计等级</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 {designLevels.map((level) => (
                   <button
@@ -209,7 +209,7 @@ export default function PriceCalculator() {
                     onClick={() => setState({ ...state, design: level.id as any })}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       state.design === level.id
-                        ? 'border-primary-500 bg-primary-50 text-primary-700'
+                        ? 'border-black bg-gray-100 text-black'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
@@ -230,13 +230,13 @@ export default function PriceCalculator() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">5. 项目周期</h3>
+              <h3 className="text-xl font-bold text-black mb-4">5. 项目周期</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <button
                   onClick={() => setState({ ...state, timeline: 'normal' })}
                   className={`p-4 rounded-xl border-2 transition-all ${
                     state.timeline === 'normal'
-                      ? 'border-primary-500 bg-primary-50 text-primary-700'
+                      ? 'border-black bg-gray-100 text-black'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
@@ -247,7 +247,7 @@ export default function PriceCalculator() {
                   onClick={() => setState({ ...state, timeline: 'urgent' })}
                   className={`p-4 rounded-xl border-2 transition-all ${
                     state.timeline === 'urgent'
-                      ? 'border-primary-500 bg-primary-50 text-primary-700'
+                      ? 'border-black bg-gray-100 text-black'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
@@ -266,7 +266,7 @@ export default function PriceCalculator() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">报价预估</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">报价预估</h3>
 
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between text-gray-600">
@@ -298,7 +298,7 @@ export default function PriceCalculator() {
               <div className="border-t border-gray-200 pt-4 mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-gray-600">预估总价</span>
-                  <span className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  <span className="text-4xl font-bold bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                     ¥{price.total.toLocaleString()}
                   </span>
                 </div>
@@ -307,7 +307,7 @@ export default function PriceCalculator() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-xl p-4 mb-6">
+              <div className="bg-gray-50 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-700">
                   💡 以上为系统自动预估价格，实际报价需根据详细需求评估后确定，上下浮动不超过20%
                 </p>
@@ -315,7 +315,7 @@ export default function PriceCalculator() {
 
               <Link
                 href="/contact"
-                className="block text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-4 rounded-full font-semibold hover:shadow-lg transition-all group"
+                className="block text-center bg-black text-white px-6 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all group"
               >
                 <span className="flex items-center justify-center">
                   获取精准报价

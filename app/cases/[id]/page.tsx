@@ -113,7 +113,7 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
               </div>
 
               {/* Client Feedback */}
-              <div className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-2xl p-8 shadow-lg border border-primary-100">
+              <div className="bg-gray-50 rounded-2xl p-8 shadow-md border border-gray-200">
                 <div className="flex items-center mb-4">
                   <Star className="text-yellow-400 fill-current" size={24} />
                   <Star className="text-yellow-400 fill-current" size={24} />
@@ -121,7 +121,7 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
                   <Star className="text-yellow-400 fill-current" size={24} />
                   <Star className="text-yellow-400 fill-current" size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">客户评价</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">客户评价</h3>
                 <p className="text-xl text-gray-700 leading-relaxed italic">
                   "{caseItem.clientFeedback}"
                 </p>
@@ -129,7 +129,7 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
 
               {/* Project Description */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">项目详情</h2>
+                <h2 className="text-3xl font-bold text-black mb-6">项目详情</h2>
                 <div className="prose prose-lg max-w-none text-gray-700">
                   <p className="mb-4">
                     本项目采用现代化的技术栈和设计理念，为客户打造了一个高性能、易维护的应用程序。
@@ -151,24 +151,24 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
             <div className="space-y-8">
               {/* Technologies */}
               <div className="bg-white rounded-2xl p-8 shadow-lg sticky top-24">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">技术栈</h3>
+                <h3 className="text-2xl font-bold text-black mb-6">技术栈</h3>
                 <div className="flex flex-wrap gap-2">
                   {caseItem.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-gradient-to-r from-primary-50 to-purple-50 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold border border-primary-200"
+                      className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-8 pt-8 border-t">
-                  <h4 className="font-bold text-gray-900 mb-4">项目信息</h4>
+                <div className="mt-8 pt-8 border-t border-gray-200">
+                  <h4 className="font-bold text-black mb-4">项目信息</h4>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex justify-between">
                       <span>分类：</span>
-                      <span className="font-semibold text-gray-900">
+                      <span className="font-semibold text-black">
                         {caseItem.category === 'web' && 'Web 开发'}
                         {caseItem.category === 'app' && 'App 开发'}
                         {caseItem.category === 'miniprogram' && '小程序'}
@@ -176,18 +176,18 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
                     </li>
                     <li className="flex justify-between">
                       <span>周期：</span>
-                      <span className="font-semibold text-gray-900">{caseItem.duration}</span>
+                      <span className="font-semibold text-black">{caseItem.duration}</span>
                     </li>
                     <li className="flex justify-between">
                       <span>费用：</span>
-                      <span className="font-semibold text-primary-600">{caseItem.price}</span>
+                      <span className="font-semibold bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">{caseItem.price}</span>
                     </li>
                   </ul>
                 </div>
 
                 <Link
                   href="/contact"
-                  className="block mt-8 text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-4 rounded-full font-semibold hover:shadow-lg transition-all"
+                  className="block mt-8 text-center bg-black text-white px-6 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all"
                 >
                   开发类似项目
                 </Link>
@@ -200,7 +200,7 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
       {/* Related Cases */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">相关案例</h2>
+          <h2 className="text-5xl font-black text-black mb-12 text-center">相关案例</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cases
