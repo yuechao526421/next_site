@@ -24,9 +24,9 @@ bits.dev 的设计理念，所有页面采用统一的极简风格。
 - **橙色** `bg-orange-500` - 运营服务
 - **红色** `bg-red-500` - 售后服务
 
-#### 金色渐变（数字/价格专用）
+#### 粉紫蓝渐变（数字/价格专用）
 ```css
-bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600
+bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500
 ```
 
 ---
@@ -53,8 +53,8 @@ bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600
     <p className="text-gray-600">描述文字</p>
     
     {/* 价格 - 金色渐变 */}
-    <div className="text-4xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-      ¥8,888 <span className="text-2xl">起</span>
+    <div className="text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+      ¥6,666 <span className="text-2xl">起</span>
     </div>
     
     {/* 列表 - 蓝色小圆点 */}
@@ -112,7 +112,7 @@ bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600
 ### 6. 数字展示（价格/统计）
 ```tsx
 {/* 金色渐变价格 */}
-<div className="text-4xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+<div className="text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
   ¥28,888 <span className="text-2xl">起</span>
 </div>
 
@@ -200,7 +200,7 @@ bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600
 
 ### 渐变数字
 ```tsx
-<span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+<span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
   40%+
 </span>
 ```

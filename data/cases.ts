@@ -46,7 +46,7 @@ export const cases: Case[] = [
       '后台内容管理系统'
     ],
     duration: '20天',
-    price: '¥8,888'
+    price: '¥6,666'
   },
   {
     id: '3',

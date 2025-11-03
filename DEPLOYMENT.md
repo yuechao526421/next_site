@@ -254,6 +254,6 @@ pm2 restart tech-team
 ## 支持
 
 如有部署问题，请联系：
-- 邮箱: contact@techteam.com
+- 邮箱: 852631621@qq.com
 - 电话: 400-888-8888
 

@@ -25,7 +25,7 @@ export default function Home() {
                 icon: Code,
                 title: 'Web 开发',
                 description: '企业官网、电商平台、管理系统',
-                price: '¥8,888',
+                price: '¥6,666',
                 features: ['响应式设计', 'SEO优化', '后台管理']
               },
               {
@@ -55,7 +55,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-2xl font-black text-black mb-2">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
-                    <div className="text-4xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-6">
+                    <div className="text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent mb-6">
                       {service.price} <span className="text-2xl">起</span>
                     </div>
                     <ul className="space-y-3 mb-8">

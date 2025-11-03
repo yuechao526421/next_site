@@ -180,7 +180,7 @@ export default function CaseDetailPage({ params }: { params: { id: string } }) {
                     </li>
                     <li className="flex justify-between">
                       <span>费用：</span>
-                      <span className="font-semibold bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">{caseItem.price}</span>
+                      <span className="font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">{caseItem.price}</span>
                     </li>
                   </ul>
                 </div>

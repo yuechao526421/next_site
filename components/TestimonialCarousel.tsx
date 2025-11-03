@@ -44,25 +44,20 @@ export default function TestimonialCarousel() {
   const [direction, setDirection] = useState(0);
 
   const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
+    enter: {
+      opacity: 0,
+      scale: 0.98
+    },
     center: {
       zIndex: 1,
-      x: 0,
-      opacity: 1
+      opacity: 1,
+      scale: 1
     },
-    exit: (direction: number) => ({
+    exit: {
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
-
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
+      opacity: 0,
+      scale: 0.98
+    }
   };
 
   const paginate = (newDirection: number) => {
@@ -90,72 +85,62 @@ export default function TestimonialCarousel() {
           <p className="text-xl text-gray-600">听听他们怎么说</p>
         </motion.div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence initial={false} custom={direction}>
+        <div className="relative max-w-4xl mx-auto px-16 md:px-20">
+          <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              custom={direction}
               variants={slideVariants}
               initial="enter"
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 }
+                duration: 0.4,
+                ease: "easeInOut"
               }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-              className="bg-white rounded-3xl shadow-2xl p-8 md:p-12"
+              className="bg-white rounded-3xl shadow-xl p-8 md:p-12"
             >
-              <Quote className="text-gray-200 mb-4" size={48} />
+              <Quote className="text-gray-200 mb-6" size={56} strokeWidth={1.5} />
               
-              <div className="flex items-center mb-4">
+              <div className="flex items-center justify-center mb-6">
                 {[...Array(testimonials[current].rating)].map((_, i) => (
-                  <Star key={i} className="text-yellow-400 fill-current" size={20} />
+                  <Star key={i} className="text-yellow-400 fill-current mx-0.5" size={22} />
                 ))}
               </div>
 
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed text-center">
                 "{testimonials[current].content}"
               </p>
 
-              <div className="flex items-center">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-3xl mr-4">
+              <div className="flex items-center justify-center">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-4xl mr-4 shadow-sm">
                   {testimonials[current].avatar}
                 </div>
-                <div>
-                  <div className="font-bold text-black text-lg">{testimonials[current].name}</div>
-                  <div className="text-gray-600">{testimonials[current].company}</div>
+                <div className="text-left">
+                  <div className="font-bold text-black text-lg mb-1">{testimonials[current].name}</div>
+                  <div className="text-gray-500 text-sm">{testimonials[current].company}</div>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation buttons */}
+          {/* Navigation buttons - 优化位置 */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-black hover:text-white transition-all hover:scale-110"
+            aria-label="上一条评价"
           >
-            <ChevronLeft className="text-black" size={24} />
+            <ChevronLeft className="text-current" size={28} strokeWidth={2.5} />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-black hover:text-white transition-all hover:scale-110"
+            aria-label="下一条评价"
           >
-            <ChevronRight className="text-black" size={24} />
+            <ChevronRight className="text-current" size={28} strokeWidth={2.5} />
           </button>
 
-          {/* Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
+          {/* Dots - 优化样式 */}
+          <div className="flex justify-center mt-10 space-x-3">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -163,9 +148,12 @@ export default function TestimonialCarousel() {
                   setDirection(index > current ? 1 : -1);
                   setCurrent(index);
                 }}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === current ? 'bg-black w-8' : 'bg-gray-300'
+                className={`h-2 rounded-full transition-all ${
+                  index === current 
+                    ? 'bg-black w-10' 
+                    : 'bg-gray-300 w-2 hover:bg-gray-400'
                 }`}
+                aria-label={`跳转到评价 ${index + 1}`}
               />
             ))}
           </div>

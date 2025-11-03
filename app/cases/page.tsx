@@ -82,12 +82,13 @@ export default function CasesPage() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
+                  className="flex"
                 >
                   <Link
                     href={`/cases/${caseItem.id}`}
-                    className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    className="group flex flex-col w-full h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                   >
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative h-64 overflow-hidden flex-shrink-0">
                       <Image
                         src={caseItem.image}
                         alt={caseItem.title}
@@ -96,7 +97,7 @@ export default function CasesPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <div className="inline-block bg-white/90 backdrop-blur-sm text-primary-600 px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                        <div className="inline-block bg-white/90 backdrop-blur-sm text-black px-3 py-1 rounded-full text-sm font-semibold mb-2">
                           {caseItem.category === 'web' && 'Web 开发'}
                           {caseItem.category === 'app' && 'App 开发'}
                           {caseItem.category === 'miniprogram' && '小程序'}
@@ -104,8 +105,8 @@ export default function CasesPage() {
                       </div>
                     </div>
 
-                    <div className="p-6">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-black transition-colors">
                         {caseItem.title}
                       </h3>
                       <p className="text-gray-600 mb-4 line-clamp-2">
@@ -116,30 +117,30 @@ export default function CasesPage() {
                         {caseItem.technologies.slice(0, 3).map((tech, i) => (
                           <span
                             key={i}
-                            className="bg-primary-50 text-primary-700 text-xs px-2 py-1 rounded-full"
+                            className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full"
                           >
                             {tech}
                           </span>
                         ))}
                         {caseItem.technologies.length > 3 && (
-                          <span className="text-primary-600 text-xs px-2 py-1">
+                          <span className="text-gray-600 text-xs px-2 py-1">
                             +{caseItem.technologies.length - 3}
                           </span>
                         )}
                       </div>
 
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between mb-4 flex-1">
                         <div>
                           <div className="text-sm text-gray-500">项目周期</div>
                           <div className="font-semibold text-gray-900">{caseItem.duration}</div>
                         </div>
                         <div className="text-right">
                           <div className="text-sm text-gray-500">项目费用</div>
-                          <div className="font-bold text-primary-600">{caseItem.price}</div>
+                          <div className="font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">{caseItem.price}</div>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex items-center text-primary-600 font-semibold group-hover:gap-2 transition-all">
+                      <div className="flex items-center text-black font-semibold group-hover:gap-2 transition-all mt-auto">
                         <span>查看详情</span>
                         <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                       </div>

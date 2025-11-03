@@ -57,7 +57,7 @@ colors: {
 - `app/contact/page.tsx` - 联系页面
 
 搜索并替换：
-- `contact@techteam.com` → 你的邮箱
+- `852631621@qq.com` → 你的邮箱
 - `400-888-8888` → 你的电话
 - `RT团队` → 你的团队名称
 
@@ -75,7 +75,7 @@ colors: {
 const services = [
   {
     title: 'Web 开发',
-    price: '¥8,888',  // 修改价格
+    price: '¥6,666',  // 修改价格
     // ...
   }
 ];

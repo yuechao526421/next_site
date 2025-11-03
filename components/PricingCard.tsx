@@ -52,7 +52,7 @@ export default function PricingCard({
         <p className="text-gray-600 mb-6">{description}</p>
 
         <div className="mb-6">
-          <span className="text-5xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+          <span className="text-5xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
             {price}
           </span>
           {price !== '联系报价' && <span className="text-gray-500 ml-2">起</span>}

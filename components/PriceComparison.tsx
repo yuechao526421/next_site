@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import { Check, X } from 'lucide-react';
 
 const comparisons = [
-  { feature: '开发成本', us: '¥8,888 起', them: '¥20,000 起' },
+  { feature: '开发成本', us: '¥6,666 起', them: '¥20,000 起' },
   { feature: '响应速度', us: '2小时内', them: '1-2个工作日' },
-  { feature: '项目周期', us: '15-30天', them: '30-60天' },
-  { feature: '免费维护', us: '30天', them: '7-15天' },
+  { feature: '项目周期', us: '15-45天', them: '30-60天' },
+  { feature: '免费维护', us: '45天', them: '10-20天' },
   { feature: '售后响应', us: '24小时在线', them: '工作时间' },
-  { feature: '二次开发', us: '优惠50%', them: '按新项目收费' },
+  { feature: '二次开发', us: '优惠30%', them: '按新项目收费' },
   { feature: '源码交付', us: '✓ 完整交付', them: '部分交付' },
   { feature: '部署协助', us: '✓ 免费协助', them: '额外收费' },
 ];
@@ -90,7 +90,7 @@ export default function PriceComparison() {
         >
           <div className="inline-block bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-md">
             <p className="text-3xl font-black text-black mb-2">
-              平均为客户节省 <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">40%+</span> 开发成本
+              平均为客户节省 <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">40%+</span> 开发成本
             </p>
             <p className="text-gray-600">同样的质量，更优的价格，更好的服务</p>
           </div>

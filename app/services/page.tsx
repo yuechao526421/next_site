@@ -7,7 +7,7 @@ import { Code, Smartphone, AppWindow, Database, Cloud, Shield, CheckCircle } fro
 const services = [
   {
     title: 'Web 开发',
-    price: '¥8,888',
+    price: '¥6,666',
     description: '企业官网、电商平台、管理系统',
     features: [
       '响应式设计，完美适配各种设备',
@@ -18,9 +18,7 @@ const services = [
       '源码完整交付',
       '30天免费维护'
     ],
-    iconBg: 'bg-blue-500',
-    icon: Code,
-    topColor: 'bg-blue-500'
+    icon: Code
   },
   {
     title: '小程序开发',
@@ -37,9 +35,7 @@ const services = [
       '30天免费维护'
     ],
     popular: true,
-    iconBg: 'bg-green-500',
-    icon: AppWindow,
-    topColor: 'bg-green-500'
+    icon: AppWindow
   },
   {
     title: 'App 开发',
@@ -55,9 +51,7 @@ const services = [
       '后台管理系统',
       '30天免费维护'
     ],
-    iconBg: 'bg-purple-500',
-    icon: Smartphone,
-    topColor: 'bg-purple-500'
+    icon: Smartphone
   },
   {
     title: 'SaaS 系统',
@@ -73,9 +67,7 @@ const services = [
       'API 接口',
       '终身技术支持'
     ],
-    iconBg: 'bg-indigo-500',
-    icon: Database,
-    topColor: 'bg-indigo-500'
+    icon: Database
   },
   {
     title: '电商平台',
@@ -91,9 +83,7 @@ const services = [
       '多端支持',
       '终身技术支持'
     ],
-    iconBg: 'bg-orange-500',
-    icon: Cloud,
-    topColor: 'bg-orange-500'
+    icon: Cloud
   },
   {
     title: '定制开发',
@@ -109,9 +99,7 @@ const services = [
       '源码交付',
       '长期技术支持'
     ],
-    iconBg: 'bg-red-500',
-    icon: Shield,
-    topColor: 'bg-red-500'
+    icon: Shield
   }
 ];
 
@@ -170,17 +158,11 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden relative"
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 flex flex-col"
                 >
-                  {service.popular && (
-                    <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                      最受欢迎
-                    </div>
-                  )}
-                  <div className={`h-1 ${service.topColor}`} />
-                  <div className="p-8">
-                    <div className={`w-20 h-20 ${service.iconBg} rounded-2xl flex items-center justify-center mb-6`}>
-                      <Icon className="text-white" size={36} strokeWidth={2} />
+                  <div className="p-8 flex-1 flex flex-col">
+                    <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
+                      <Icon className="text-black" size={36} strokeWidth={2} />
                     </div>
                     <h3 className="text-2xl font-black text-black mb-2">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
@@ -190,15 +172,15 @@ export default function ServicesPage() {
                         联系报价
                       </div>
                     ) : (
-                      <div className="text-4xl font-black bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-6">
+                      <div className="text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent mb-6">
                         {service.price} <span className="text-2xl">起</span>
                       </div>
                     )}
                     
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-8 flex-1">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-start text-gray-700">
-                          <CheckCircle className="text-green-600 mr-2 flex-shrink-0 mt-0.5" size={18} strokeWidth={3} />
+                          <CheckCircle className="text-black mr-2 flex-shrink-0 mt-0.5" size={18} strokeWidth={3} />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
@@ -206,7 +188,7 @@ export default function ServicesPage() {
                     
                     <Link
                       href="/contact"
-                      className="block text-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all"
+                      className="block text-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all mt-auto"
                     >
                       立即咨询
                     </Link>
@@ -298,7 +280,7 @@ export default function ServicesPage() {
             {[
               {
                 q: '项目开发周期是多久？',
-                a: '根据项目复杂度，简单官网 15-20 天，复杂系统 30-60 天。我们会在需求评估后给出准确的时间表。'
+                a: '根据项目复杂度，简单官网 7-20 天，复杂系统 30-90 天。我们会在需求评估后给出准确的时间表。'
               },
               {
                 q: '如何保证项目质量？',
@@ -310,7 +292,7 @@ export default function ServicesPage() {
               },
               {
                 q: '能否看到开发进度？',
-                a: '当然！我们会提供项目管理看板，您可以实时查看开发进度、任务完成情况，确保项目透明可控。'
+                a: '当然！我们会为您汇报工作进度，您可以实时了解开发进度、任务完成情况，确保项目透明可控。'
               },
               {
                 q: '源码会交付吗？',

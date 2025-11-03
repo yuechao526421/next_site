@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden overflow-x-hidden bg-white">
       {/* 简洁几何装饰 */}
       <div className="absolute inset-0 overflow-hidden">
         {/* 大圆形装饰 */}
@@ -44,9 +44,9 @@ export default function HeroSection() {
             className="mb-12"
           >
             <h1 className="text-7xl md:text-9xl font-black mb-6 leading-none tracking-tight">
-              <span className="text-black">用技术为您</span>
+              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">用技术为您</span>
               <br />
-              <span className="text-black">省钱</span>
+              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">省钱</span>
             </h1>
           </motion.div>
 
@@ -65,7 +65,7 @@ export default function HeroSection() {
               个人开发团队，专注中小企业软件开发
             </p>
             <p className="text-lg text-gray-500">
-              明码标价 · 快速交付 · 终身维护
+              明码标价 · 快速交付 · 后期维护
             </p>
           </motion.div>
 
@@ -118,7 +118,7 @@ export default function HeroSection() {
 
           {/* Stats - 极简数据展示 */}
           <motion.div
-            className="mt-24 grid grid-cols-3 gap-12 max-w-3xl mx-auto"
+            className="mt-24 grid grid-cols-3 gap-4 md:gap-12 max-w-3xl mx-auto px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
@@ -129,10 +129,10 @@ export default function HeroSection() {
               { number: '24h', label: '快速响应' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-6xl font-black text-black mb-3">
+                <div className="text-4xl md:text-6xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent mb-2 md:mb-3">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-xs md:text-base text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </motion.div>

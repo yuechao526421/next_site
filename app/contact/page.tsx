@@ -107,7 +107,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-black mb-1">邮箱</h3>
-                    <p className="text-gray-600">contact@techteam.com</p>
+                    <p className="text-gray-600">852631621@qq.com</p>
                     <p className="text-sm text-gray-500 mt-1">工作日24小时内回复</p>
                   </div>
                 </div>
