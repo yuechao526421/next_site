@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: '小程序开发',
-    price: '¥15,888',
+    price: '¥8,888',
     description: '微信 / 支付宝 / 抖音小程序',
     features: [
       '多端小程序开发',
@@ -39,7 +39,7 @@ const services = [
   },
   {
     title: 'App 开发',
-    price: '¥28,888',
+    price: '¥18,888',
     description: 'iOS / Android 原生或跨平台应用',
     features: [
       'iOS + Android 双端开发',
@@ -70,17 +70,17 @@ const services = [
     icon: Database
   },
   {
-    title: '人工智能应用',
-    price: '¥42,888',
-    description: 'AI 驱动的智能化解决方案',
+    title: '插件应用',
+    price: '¥5,555',
+    description: '浏览器插件 / VSCode 插件 / 各类扩展',
     features: [
-      '机器学习模型',
-      '自然语言处理',
-      '图像识别',
-      '智能推荐',
-      '数据分析',
-      'AI 对话系统',
-      '模型训练部署',
+      '浏览器扩展开发',
+      'VSCode 插件',
+      'Chrome / Edge 插件',
+      'Webpack / Vite 插件',
+      'API 集成',
+      '自动化脚本',
+      '插件商店上架',
       '终身技术支持'
     ],
     icon: Cloud

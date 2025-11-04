@@ -5,38 +5,38 @@ import { Shield, Clock, Award, Users, Code, Zap, Heart, TrendingUp } from 'lucid
 
 const teamMembers = [
   {
-    name: '张伟',
+    name: '陈哥',
     role: '全栈工程师 / 团队负责人',
     avatar: '👨‍💻',
-    background: '前阿里巴巴高级开发工程师，8年全栈开发经验',
-    skills: ['SpringBoot', 'MyBatis', 'Redis']
+    background: '高级开发工程师，8年全栈开发经验',
+    skills: ['SpringBoot', 'MyBatis', 'Redis','Vue.js','React']
   },
   {
-    name: '李明',
+    name: '岳工',
     role: '前端工程师',
     avatar: '👨‍🎨',
-    background: '前腾讯前端开发，精通现代前端技术栈',
+    background: '前端开发，精通现代前端技术栈',
     skills: ['React', 'Next.js', 'TypeScript']
   },
   {
-    name: '王芳',
+    name: '阿宇',
     role: '后端工程师',
     avatar: '👩‍💻',
-    background: '前字节跳动后端开发，擅长高并发系统',
+    background: '后端开发，擅长高并发系统',
     skills: ['Django', 'FastAPI', 'MySQL']
   },
   {
     name: '刘洋',
     role: '移动端工程师',
     avatar: '📱',
-    background: '前美团移动端开发，iOS/Android双端经验',
+    background: '移动端开发，iOS/Android双端经验',
     skills: ['React Native', 'Flutter', 'Kotlin']
   },
   {
-    name: '陈娜',
+    name: '丹姐',
     role: 'UI/UX 设计师',
     avatar: '🎨',
-    background: '前小米设计师，6年互联网产品设计经验',
+    background: '6年互联网产品设计经验',
     skills: ['Figma', 'Sketch', 'Prototyping']
   }
 ];

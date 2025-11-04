@@ -113,7 +113,7 @@ bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500
 ```tsx
 {/* 金色渐变价格 */}
 <div className="text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-  ¥28,888 <span className="text-2xl">起</span>
+  ¥18,888 <span className="text-2xl">起</span>
 </div>
 
 {/* 黑色统计数字 */}

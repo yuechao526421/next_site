@@ -32,14 +32,14 @@ export default function Home() {
                 icon: Smartphone,
                 title: 'App 开发',
                 description: 'iOS / Android 原生或跨平台应用',
-                price: '¥28,888',
+                price: '¥18,888',
                 features: ['原生体验', '跨平台', '推送通知']
               },
               {
                 icon: AppWindow,
                 title: '小程序开发',
                 description: '微信小程序、支付宝小程序',
-                price: '¥15,888',
+                price: '¥8,888',
                 features: ['快速开发', '易推广', '低成本']
               }
             ].map((service, index) => {

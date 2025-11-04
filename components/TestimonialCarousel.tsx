@@ -8,7 +8,7 @@ const testimonials = [
   {
     id: 1,
     name: '张总',
-    company: 'AI科技公司创始人',
+    company: '插件开发工作室创始人',
     content: '之前找传统软件公司报价要8万，Tech团队只要3万就搞定了，质量还更好。开发过程透明，沟通顺畅，强烈推荐！',
     rating: 5,
     avatar: '👨‍💼'

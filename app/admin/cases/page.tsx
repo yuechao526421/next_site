@@ -227,7 +227,7 @@ export function getCasesByCategory(category: Case['category']): Case[] {
                   value={editingCase.price}
                   onChange={(e) => setEditingCase({ ...editingCase, price: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="¥28,888"
+                  placeholder="¥18,888"
                 />
               </div>
 

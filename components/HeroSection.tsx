@@ -44,7 +44,7 @@ export default function HeroSection() {
             className="mb-12"
           >
             <h1 className="text-7xl md:text-9xl font-black mb-6 leading-none tracking-tight">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">用技术为您</span>
+              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">用服务为您</span>
               <br />
               <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">省钱</span>
             </h1>

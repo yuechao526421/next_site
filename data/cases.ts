@@ -14,21 +14,21 @@ export interface Case {
 export const cases: Case[] = [
   {
     id: '1',
-    title: 'AI智能助手',
-    description: '基于大语言模型的智能对话助手，支持多场景应用',
+    title: '浏览器效率插件',
+    description: 'Chrome扩展插件，提升浏览器使用效率',
     category: 'web',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
-    technologies: ['FastAPI', 'Django', 'Redis', 'MySQL', 'OpenAI API', 'AWS'],
+    technologies: ['JavaScript', 'Chrome API', 'Webpack', 'React', 'Storage API'],
     clientFeedback: '开发效率高，交付质量超出预期，售后响应及时。性价比非常高！',
     features: [
-      '自然语言理解',
-      '智能对话交互',
-      '多轮对话上下文',
-      '知识库集成',
-      '多场景适配'
+      '网页内容抓取',
+      '自动化表单填充',
+      '标签页管理',
+      '快捷键支持',
+      '数据同步功能'
     ],
     duration: '45天',
-    price: '¥28,888'
+    price: '¥18,888'
   },
   {
     id: '2',
@@ -118,7 +118,7 @@ export const cases: Case[] = [
       '证书自动生成'
     ],
     duration: '50天',
-    price: '¥42,888'
+    price: '¥5,555'
   }
 ];
 

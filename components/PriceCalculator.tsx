@@ -18,7 +18,7 @@ const projectTypes = [
   { id: 'app', label: 'App 应用', basePrice: 28888, includedPages: 30 },
   { id: 'miniprogram', label: '小程序', basePrice: 15888, includedPages: 25 },
   { id: 'desktop', label: '桌面应用', basePrice: 35888, includedPages: 35 },
-  { id: 'ai', label: '人工智能应用', basePrice: 42888, includedPages: 40 },
+  // { id: 'ai', label: '插件应用', basePrice: 42888, includedPages: 40 },
 ];
 
 const featuresList = [

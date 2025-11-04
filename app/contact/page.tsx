@@ -256,7 +256,7 @@ export default function ContactPage() {
                           <option value="app">App 开发</option>
                           <option value="miniprogram">小程序开发</option>
                           <option value="desktop">桌面应用</option>
-                          <option value="ai">人工智能应用</option>
+                          <option value="ai">插件应用</option>
                           <option value="custom">定制开发</option>
                         </select>
                       </div>
