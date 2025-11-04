@@ -9,28 +9,35 @@ const teamMembers = [
     role: '全栈工程师 / 团队负责人',
     avatar: '👨‍💻',
     background: '前阿里巴巴高级开发工程师，8年全栈开发经验',
-    skills: ['React', 'Node.js', 'System Architecture']
+    skills: ['SpringBoot', 'MyBatis', 'Redis']
   },
   {
     name: '李明',
     role: '前端工程师',
     avatar: '👨‍🎨',
     background: '前腾讯前端开发，精通现代前端技术栈',
-    skills: ['React', 'Vue', 'UI/UX Design']
+    skills: ['React', 'Next.js', 'TypeScript']
   },
   {
     name: '王芳',
     role: '后端工程师',
     avatar: '👩‍💻',
     background: '前字节跳动后端开发，擅长高并发系统',
-    skills: ['Node.js', 'Python', 'Database']
+    skills: ['Django', 'FastAPI', 'MySQL']
   },
   {
     name: '刘洋',
     role: '移动端工程师',
     avatar: '📱',
     background: '前美团移动端开发，iOS/Android双端经验',
-    skills: ['React Native', 'iOS', 'Android']
+    skills: ['React Native', 'Flutter', 'Kotlin']
+  },
+  {
+    name: '陈娜',
+    role: 'UI/UX 设计师',
+    avatar: '🎨',
+    background: '前小米设计师，6年互联网产品设计经验',
+    skills: ['Figma', 'Sketch', 'Prototyping']
   }
 ];
 
@@ -165,7 +172,7 @@ export default function AboutPage() {
             <h2 className="text-5xl font-black text-black mb-8 text-center">我们的故事</h2>
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Tech团队成立于2020年，由几位来自阿里、腾讯、字节等一线互联网公司的工程师共同创立。
+                Tech团队成立于2020年，由几位热爱技术、经验丰富的互联网公司的工程师共同创立。
                 我们看到许多中小企业和创业者需要优质的软件开发服务，但传统外包公司价格昂贵、响应缓慢、质量参差不齐。
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">

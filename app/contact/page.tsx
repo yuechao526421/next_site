@@ -9,6 +9,7 @@ export default function ContactPage() {
     name: '',
     phone: '',
     email: '',
+    wechat: '',
     projectType: 'web',
     budget: '',
     message: ''
@@ -39,6 +40,7 @@ export default function ContactPage() {
           name: '',
           phone: '',
           email: '',
+          wechat: '',
           projectType: 'web',
           budget: '',
           message: ''
@@ -117,9 +119,9 @@ export default function ContactPage() {
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-black mb-1">电话 / 微信</h3>
-                    <p className="text-gray-600">400-888-8888</p>
-                    <p className="text-sm text-gray-500 mt-1">工作日 9:00 - 21:00</p>
+                    <h3 className="text-xl font-bold text-black mb-1">微信</h3>
+                    <p className="text-gray-600">IslandUstinian-</p>
+                    <p className="text-sm text-gray-500 mt-1">工作日 7:00 - 00:00</p>
                   </div>
                 </div>
 
@@ -129,7 +131,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-black mb-1">地址</h3>
-                    <p className="text-gray-600">中国·北京·朝阳区</p>
+                    <p className="text-gray-600">中国·四川·成都市</p>
                     <p className="text-sm text-gray-500 mt-1">可远程协作，支持全国服务</p>
                   </div>
                 </div>
@@ -197,14 +199,13 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          联系电话 *
+                          联系电话
                         </label>
                         <input
-                          type="tel"
+                          type="text"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                           placeholder="您的手机号"
                         />
@@ -215,7 +216,7 @@ export default function ContactPage() {
                           邮箱
                         </label>
                         <input
-                          type="email"
+                          type="text"
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
@@ -223,6 +224,20 @@ export default function ContactPage() {
                           placeholder="your@email.com"
                         />
                       </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        微信号
+                      </label>
+                      <input
+                        type="text"
+                        name="wechat"
+                        value={formData.wechat}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                        placeholder="您的微信号"
+                      />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -240,8 +255,8 @@ export default function ContactPage() {
                           <option value="web">Web 开发</option>
                           <option value="app">App 开发</option>
                           <option value="miniprogram">小程序开发</option>
-                          <option value="saas">SaaS 系统</option>
-                          <option value="ecommerce">电商平台</option>
+                          <option value="desktop">桌面应用</option>
+                          <option value="ai">人工智能应用</option>
                           <option value="custom">定制开发</option>
                         </select>
                       </div>
@@ -268,13 +283,12 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        项目描述 *
+                        项目描述
                       </label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        required
                         rows={6}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
                         placeholder="请详细描述您的项目需求，包括功能要求、预期目标等..."

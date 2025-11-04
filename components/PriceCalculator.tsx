@@ -6,7 +6,7 @@ import { Calculator, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 interface CalculatorState {
-  projectType: 'web' | 'app' | 'miniprogram' | 'saas' | 'ecommerce';
+  projectType: 'web' | 'app' | 'miniprogram' | 'desktop' | 'ai';
   pages: number;
   features: string[];
   design: 'basic' | 'standard' | 'premium';
@@ -17,8 +17,8 @@ const projectTypes = [
   { id: 'web', label: 'Web 网站', basePrice: 8888, includedPages: 20 },
   { id: 'app', label: 'App 应用', basePrice: 28888, includedPages: 30 },
   { id: 'miniprogram', label: '小程序', basePrice: 15888, includedPages: 25 },
-  { id: 'saas', label: 'SaaS 系统', basePrice: 35888, includedPages: 35 },
-  { id: 'ecommerce', label: '电商平台', basePrice: 42888, includedPages: 40 },
+  { id: 'desktop', label: '桌面应用', basePrice: 35888, includedPages: 35 },
+  { id: 'ai', label: '人工智能应用', basePrice: 42888, includedPages: 40 },
 ];
 
 const featuresList = [

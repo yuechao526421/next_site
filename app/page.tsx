@@ -24,7 +24,7 @@ export default function Home() {
               {
                 icon: Code,
                 title: 'Web 开发',
-                description: '企业官网、电商平台、管理系统',
+                description: '企业官网、管理系统、在线平台',
                 price: '¥6,666',
                 features: ['响应式设计', 'SEO优化', '后台管理']
               },

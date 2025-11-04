@@ -8,8 +8,8 @@ const testimonials = [
   {
     id: 1,
     name: '张总',
-    company: '某电商平台创始人',
-    content: '之前找传统软件公司报价要8万，RT团队只要3万就搞定了，质量还更好。开发过程透明，沟通顺畅，强烈推荐！',
+    company: 'AI科技公司创始人',
+    content: '之前找传统软件公司报价要8万，Tech团队只要3万就搞定了，质量还更好。开发过程透明，沟通顺畅，强烈推荐！',
     rating: 5,
     avatar: '👨‍💼'
   },
@@ -32,7 +32,7 @@ const testimonials = [
   {
     id: 4,
     name: '刘总',
-    company: 'SaaS创业公司',
+    company: '桌面软件创业公司',
     content: '技术实力强，对我们的业务理解深入，提出了很多有价值的建议。系统稳定运行半年了，没出过问题。性价比太高了！',
     rating: 5,
     avatar: '🧑‍💻'

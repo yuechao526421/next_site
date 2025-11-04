@@ -54,33 +54,33 @@ const services = [
     icon: Smartphone
   },
   {
-    title: 'SaaS 系统',
+    title: '桌面应用',
     price: '¥35,888',
-    description: '企业级管理系统、协作平台',
+    description: 'Windows / macOS 跨平台桌面软件',
     features: [
-      '多租户架构',
-      '权限管理系统',
-      '数据可视化',
-      '实时通信',
-      '文件管理',
-      '工作流引擎',
-      'API 接口',
+      '原生性能体验',
+      '离线功能支持',
+      '系统深度集成',
+      '自动更新机制',
+      '数据本地存储',
+      '快捷键支持',
+      '多窗口管理',
       '终身技术支持'
     ],
     icon: Database
   },
   {
-    title: '电商平台',
+    title: '人工智能应用',
     price: '¥42,888',
-    description: 'B2C / B2B 电商解决方案',
+    description: 'AI 驱动的智能化解决方案',
     features: [
-      '商品管理系统',
-      '订单管理',
-      '支付集成',
-      '物流对接',
-      '营销工具',
+      '机器学习模型',
+      '自然语言处理',
+      '图像识别',
+      '智能推荐',
       '数据分析',
-      '多端支持',
+      'AI 对话系统',
+      '模型训练部署',
       '终身技术支持'
     ],
     icon: Cloud
@@ -105,11 +105,15 @@ const services = [
 
 const techStack = [
   { name: 'React / Next.js', icon: Code },
+  { name: 'SpringBoot / MyBatis', icon: Code },
+  { name: 'Node.js / NestJS', icon: Database },
+  { name: 'Django / PHP', icon: Code },
   { name: 'React Native', icon: Smartphone },
-  { name: 'Node.js', icon: Database },
-  { name: 'TypeScript', icon: Code },
-  { name: 'TailwindCSS', icon: AppWindow },
+  { name: 'TypeScript / Java', icon: Code },
+  { name: 'MySQL / Redis', icon: Database },
   { name: 'PostgreSQL / MongoDB', icon: Database },
+  { name: 'TailwindCSS / Vue', icon: AppWindow },
+  { name: 'Express / FastAPI', icon: Code },
   { name: 'AWS / 阿里云', icon: Cloud },
   { name: 'Docker / K8s', icon: Shield }
 ];
